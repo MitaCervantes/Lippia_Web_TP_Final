@@ -1,4 +1,4 @@
-@Smoke
+
 Feature: Iniciar sesion con nombre de usuario y contraseña
 
 Background:

@@ -2,12 +2,11 @@ package lippia.web.steps;
 
 import com.crowdar.core.PageSteps;
 import io.cucumber.java.en.*;
-import lippia.web.services.AutomationHomeService;
 import lippia.web.services.LoginSearchResultService;
 import lippia.web.services.LoginService;
 
 
-public class LoginSearchSteps extends PageSteps {
+public class LoginSteps extends PageSteps {
 
 
     @And("^ingreso el nombre de usuario (.*) en el campo de nombre de usuario")

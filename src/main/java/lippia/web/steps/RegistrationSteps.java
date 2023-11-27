@@ -6,7 +6,7 @@ import io.cucumber.java.en.When;
 import lippia.web.services.RegistrationSearchResultService;
 import lippia.web.services.RegistrationService;
 
-public class RegistrationSearchSteps {
+public class RegistrationSteps {
 
     @And("^ingresa una dirección de correo electrónico (.*) en el campo de dirección de correo electrónico")
     public void ingresaCorreo(String criteria) {

@@ -1,4 +1,4 @@
-@Smoke
+
 Feature: Registration-Sign-in failed
 
 
