@@ -1,6 +1,8 @@
 package lippia.web.constants;
 
 public class HomePageConstants {
+    public static final String SHOP_BUTTON_XPATH = "xpath://*[@id='menu-item-40']/a";
+    public static final String HOME_BUTTON_XPATH = "xpath://*[@id='content']/nav/a";
     public static final String ARRIVALS_DIV = "xpath://div[2]/div/div/div/div/div[2]";
     public static final String IMG_ARRIVALS = "xpath://*/div/ul/li/a/img";
     public static final String SELENIUM_BOOK = "xpath://*[contains(@title, 'Selenium Ruby')]";
@@ -18,7 +20,6 @@ public class HomePageConstants {
     public static final String YOUR_ORDER = "id:order_review_heading";
     public static final String PAYMENT_METHOD_DIV = "id:payment";
     public static final String FORM_PLACE_ORDER = "xpath://*[@id='payment']/div";
-
     public static final String FIRST_NAME = "id:billing_first_name";
     public static final String LAST_NAME = "id:billing_last_name";
     public static final String COMPANY_NAME= "id:billing_company";

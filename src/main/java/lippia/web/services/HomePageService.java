@@ -3,7 +3,6 @@ package lippia.web.services;
 import com.crowdar.core.actions.ActionManager;
 import com.crowdar.driver.DriverManager;
 import com.crowdar.util.MapUtils;
-import lippia.web.constants.AutomationConstants;
 import lippia.web.constants.HomePageConstants;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -16,11 +15,11 @@ import java.util.Map;
 public class HomePageService extends ActionManager {
 
     public static void clickShop() {
-        click(AutomationConstants.SHOP_BUTTON_XPATH);
+        click(HomePageConstants.SHOP_BUTTON_XPATH);
     }
 
     public static void clickHome() {
-        click(AutomationConstants.HOME_BUTTON_XPATH);
+        click(HomePageConstants.HOME_BUTTON_XPATH);
     }
 
     public static void arrivalsVerification() {
@@ -29,8 +28,7 @@ public class HomePageService extends ActionManager {
     }
 
     public static void clickImageArrival(String image) {
-        String selectedImage = image;
-        switch (selectedImage) {
+        switch (image) {
             case "Selenium Ruby":
                 click(HomePageConstants.SELENIUM_BOOK);
                 break;
@@ -41,7 +39,7 @@ public class HomePageService extends ActionManager {
                 click(HomePageConstants.JAVASCRIPT_BOOK);
                 break;
             default:
-                System.out.println("Error clicked image" + selectedImage);
+                System.out.println("Error clicked image" + image);
                 break;
         }
     }
