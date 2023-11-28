@@ -15,10 +15,6 @@ public class LoginService extends ActionManager {
         navigateTo(PropertyManager.getProperty("web.base.url"));
     }
 
-    public static void clickMyAccountButton() {
-        click(MyAccountConstants.MYACCOUNT_BUTTON_XPATH);
-    }
-
     public static void enterEmail(String email) {
         setInput(LoginConstants.INPUT_USER_LOGIN_XPATH, email);
     }

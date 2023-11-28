@@ -3,19 +3,15 @@ package lippia.web.steps;
 import com.crowdar.core.PageSteps;
 import io.cucumber.java.en.*;
 import lippia.web.services.LoginService;
+import lippia.web.services.MyAccountService;
 
 
 public class LoginSteps extends PageSteps {
 
     @Given("^login to automationtesting website$")
     public void home() { LoginService.navigateToWeb();  }
-
-    @When("click on My Account Menu")
-    public void clickMyAccount() { LoginService.clickMyAccountButton();  }
-
     @And("now click on login button")
     public void nowClickOnLoginButton() { LoginService.clickLoginButton();  }
-
     @And("enter the case changed email (.*) in email textbox")
     public void enterTheCaseChangedEmail(String email) {
         LoginService.enterEmail(email);
