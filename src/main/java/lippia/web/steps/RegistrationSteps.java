@@ -2,33 +2,26 @@ package lippia.web.steps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import lippia.web.services.RegistrationSearchResultService;
 import lippia.web.services.RegistrationService;
 
 public class RegistrationSteps {
 
-    @And("^ingresa una dirección de correo electrónico (.*) en el campo de dirección de correo electrónico")
-    public void ingresaCorreo(String criteria) {
-        RegistrationService.enterCorreoCriteria(criteria);
+    @And("enter valid Email Address (.*) in Email-Address textbox")
+    public void enterValidEmailAddressInEmailAddressTextbox(String email) {
+        RegistrationService.enterEmail(email);
+    }
+    @And("enter password (.*) in password textbox")
+    public void enterPasswordInPasswordTextbox(String password) {
+        RegistrationService.enterPassword(password);
     }
 
-
-    @When("^ingresa una contraseña (.*) vacía en el campo de contraseña")
-    public void ingresaContrasenia(String criteria) {
-        RegistrationService.enterPasswordCriteria(criteria);
-    }
-
-
-    @And("hacer click en el botón Registrarse")
+    @And("click on Register button")
     public void clickRegister() {
         RegistrationService.clickRegisterButton();
     }
-
-    @Then("el registro debería fallar con un mensaje (.*)")
-    public void registroFallido(String criteria) {
-        RegistrationSearchResultService.verifyMessage(criteria);
+    @Then("registration must fail with a warning message (.*)")
+    public void registerFails(String message) {
+        RegistrationService.registerError(message);
     }
-
 
 }

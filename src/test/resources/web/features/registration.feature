@@ -1,34 +1,23 @@
-
-Feature: Registration-Sign-in failed
+@Smoke
+Feature: Registration
 
 
 Background:
-Given ingreso a la pagina de automationtesting
+Given login to automationtesting website
 
-@RegistroFallido
-Scenario Outline: Registro fallido
-  When hago clic en el menú Mi Cuenta
-  And ingresa una dirección de correo electrónico <correo> en el campo de dirección de correo electrónico
-  When ingresa una contraseña <contrasenia> vacía en el campo de contraseña
-  And hacer click en el botón Registrarse
-  Then el registro debería fallar con un mensaje <resultado>
+@RegisterFails
+Scenario Outline: 4. Registration with empty password
+  When click on My Account Menu
+  And enter valid Email Address <email> in Email-Address textbox
+  And enter password <password> in password textbox
+  And  click on Register button
+  Then registration must fail with a warning message <message>
 
-@ContraseniaVacia
+
   Examples:
-    | correo                     | contrasenia | resultado                        |
-    | mita_cervantes@hotmail.com |             | Ingrese una contraseña de cuenta |
-#Falla por contrasenia vacia
-
-  @CorreoRegistrado
-  Examples:
-    | correo  | contrasenia | resultado                  |
-    | mita_cervantes@hotmail.com  | Cmita2021#  | Nombre de usuario invalido |
-#Falla por correo registrado
-
-  @CorreoVacio
-  Examples:
-    | correo | contrasenia | resultado                                   |
-    |        | Cmita2021#  | Ingrese una dirección de correo electrónico |
-#Falla por correo vacio
+    | email            | password | message                                      |
+    | mita@hotmail.com |          | Error: Please enter an account password.     |
+    |                  |          | Error: Please provide a valid email address. |
+  #Registration fails due to empty data
 
 

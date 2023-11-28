@@ -12,19 +12,19 @@ import static com.crowdar.core.actions.WebActionManager.navigateTo;
 
 public class LoginService extends ActionManager {
 
-    public static void  navegarWeb(){
+    public static void  navigateToWeb(){
         navigateTo(PropertyManager.getProperty("web.base.url"));
     }
 
     public static void clickMyAccountButton() {
-        click(LoginConstants.MYACCOUNT_BUTTON_XPATH);
+        click(MyAccountConstants.MYACCOUNT_BUTTON_XPATH);
     }
 
-    public static void enterUserCriteria(String user) {
-        setInput(LoginConstants.INPUT_USER_LOGIN_XPATH, user);
+    public static void enterEmail(String email) {
+        setInput(LoginConstants.INPUT_USER_LOGIN_XPATH, email);
     }
 
-    public static void enterPasswordCriteria(String password) {
+    public static void enterPassword(String password) {
         setInput(LoginConstants.INPUT_PASSWORD_LOGIN_XPATH, password);
     }
 
@@ -32,8 +32,8 @@ public class LoginService extends ActionManager {
         click(LoginConstants.LOGIN_BUTTON_XPATH);
     }
 
-    public static void LoginError(String message) {
-        String errorMessagePage = getText(LoginConstants.LOGIN_ERROR_DESCRIP);
+    public static void loginError(String message) {
+        String errorMessagePage = getText(LoginConstants.LOGIN_ERROR_MESSAGE);
         Assert.assertEquals(message, errorMessagePage);
     }
     public static void verifyLoginPage() {
