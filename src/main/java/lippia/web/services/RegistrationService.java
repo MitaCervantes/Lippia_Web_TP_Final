@@ -15,7 +15,7 @@ public class RegistrationService extends ActionManager {
     }
 
     public static void clickRegisterButton() {
-        ActionManager.waitVisibility(RegistrationConstants.REGISTER_BUTTON);
+        waitVisibility(RegistrationConstants.REGISTER_BUTTON);
         click(RegistrationConstants.REGISTER_BUTTON);
     }
 

@@ -1,7 +1,6 @@
 package lippia.web.constants;
 
 public class HomePageConstants {
-    public static final String SHOP_BUTTON_XPATH = "xpath://*[@id='menu-item-40']/a";
     public static final String HOME_BUTTON_XPATH = "xpath://*[@id='content']/nav/a";
     public static final String ARRIVALS_DIV = "xpath://div[2]/div/div/div/div/div[2]";
     public static final String IMG_ARRIVALS = "xpath://*/div/ul/li/a/img";
@@ -9,11 +8,6 @@ public class HomePageConstants {
     public static final String HTML_BOOK = "xpath://*[contains(@title, 'Thinking in HTML')]";
     public static final String JAVASCRIPT_BOOK = "xpath://*[contains(@title, 'Mastering JavaScript')]";
     public static final String ADD_BASKET = "xpath://button[contains(text(),'Add to basket')]";
-    public static final String PRICE_MENU_ITEM = "xpath://*[@id='wpmenucartli']/a";
-    public static final String SUBTOTAL_VALUE = "xpath://*[@id='page-34']/div/div[1]/div/div/table/tbody/tr[1]/td";
-    public static final String TOTAL_VALUE = "xpath://*[@id='page-34']/div/div[1]/div/div/table/tbody/tr[3]/td";
-    public static final String SUBTOTAL_AMOUNT= "xpath://*[contains(@data-title,'Subtotal')]";
-    public static final String TOTAL_AMOUNT= "xpath://*[contains(@data-title,'Total')]/strong";
     public static final String PROCEED_CHECK_OUT_BUTTON = "xpath://*[contains(@class, 'checkout-button button alt wc-forward')]";
     public static final String BILLING_DETAILS = "xpath://h3[contains(text(),'Billing Details')]";
     public static final String ADDITIONAL_INFORMATION = "xpath://h3[contains(text(),'Additional Information')]";

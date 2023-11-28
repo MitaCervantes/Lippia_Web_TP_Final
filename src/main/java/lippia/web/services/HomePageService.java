@@ -4,6 +4,7 @@ import com.crowdar.core.actions.ActionManager;
 import com.crowdar.driver.DriverManager;
 import com.crowdar.util.MapUtils;
 import lippia.web.constants.HomePageConstants;
+import lippia.web.constants.ShopConstants;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -14,9 +15,6 @@ import java.util.Map;
 
 public class HomePageService extends ActionManager {
 
-    public static void clickShop() {
-        click(HomePageConstants.SHOP_BUTTON_XPATH);
-    }
 
     public static void clickHome() {
         click(HomePageConstants.HOME_BUTTON_XPATH);
@@ -45,8 +43,8 @@ public class HomePageService extends ActionManager {
     }
 
     public static void bookWithPriceInTheMenuItem() {
-        waitVisibility(HomePageConstants.PRICE_MENU_ITEM);
-        Assert.assertTrue(isVisible(HomePageConstants.PRICE_MENU_ITEM));
+        waitVisibility(ShopConstants.PRICE_MENU_ITEM);
+        Assert.assertTrue(isVisible(ShopConstants.PRICE_MENU_ITEM));
     }
 
     public static void clickAddToBasket() {
@@ -59,19 +57,20 @@ public class HomePageService extends ActionManager {
     }
 
     public static void clickItemLink() {
-        click(HomePageConstants.PRICE_MENU_ITEM);
+        waitTime(1000);
+        click(ShopConstants.PRICE_MENU_ITEM);
     }
 
     public static void findTotalAndSubtotalValues() {
-        waitVisibility(HomePageConstants.SUBTOTAL_VALUE);
-        Assert.assertTrue(isVisible(HomePageConstants.SUBTOTAL_VALUE));
-        waitVisibility(HomePageConstants.TOTAL_VALUE);
-        Assert.assertTrue(isVisible(HomePageConstants.TOTAL_VALUE));
+        waitVisibility(ShopConstants.SUBTOTAL_VALUE);
+        Assert.assertTrue(isVisible(ShopConstants.SUBTOTAL_VALUE));
+        waitVisibility(ShopConstants.TOTAL_VALUE);
+        Assert.assertTrue(isVisible(ShopConstants.TOTAL_VALUE));
     }
 
     public static void validateAmounts() {
-        WebElement subtotal = getElement(HomePageConstants.SUBTOTAL_AMOUNT);
-        WebElement total = getElement(HomePageConstants.TOTAL_AMOUNT);
+        WebElement subtotal = getElement(ShopConstants.SUBTOTAL_AMOUNT);
+        WebElement total = getElement(ShopConstants.TOTAL_AMOUNT);
         double Subtotal = Double.parseDouble(subtotal.getText().substring(1));
         double Total = Double.parseDouble(total.getText().substring(1));
         Assert.assertTrue(Subtotal < Total, "El subtotal no es menor al total");

@@ -2,7 +2,6 @@ package lippia.web.services;
 
 import com.crowdar.core.PropertyManager;
 import com.crowdar.core.actions.ActionManager;
-import com.crowdar.core.actions.MobileActionManager;
 import com.crowdar.driver.DriverManager;
 import lippia.web.constants.LoginConstants;
 import lippia.web.constants.MyAccountConstants;
@@ -40,8 +39,8 @@ public class LoginService extends ActionManager {
         Assert.assertTrue(isVisible(LoginConstants.LOGIN_PAGE_XPATH));
     }
     public static void clickLogOutButton(){
-        MobileActionManager.waitVisibility(MyAccountConstants.LOGOUT_BUTTON);
-        MobileActionManager.click(MyAccountConstants.LOGOUT_BUTTON);
+        waitVisibility(MyAccountConstants.LOGOUT_BUTTON);
+        click(MyAccountConstants.LOGOUT_BUTTON);
     }
     public static void clickBackButton(){
         DriverManager.getDriverInstance().getWrappedDriver().navigate().back();
