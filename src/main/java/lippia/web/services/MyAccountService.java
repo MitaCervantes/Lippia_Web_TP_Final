@@ -26,5 +26,4 @@ public class MyAccountService extends ActionManager {
         click(MyAccountConstants.LOGOUT_BUTTON);
     }
 
-
 }

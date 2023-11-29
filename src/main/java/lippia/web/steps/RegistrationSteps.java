@@ -15,7 +15,6 @@ public class RegistrationSteps extends PageSteps {
     public void enterPasswordInPasswordTextbox(String password) {
         RegistrationService.enterPassword(password);
     }
-
     @And("click on Register button")
     public void clickRegister() {
         RegistrationService.clickRegisterButton();

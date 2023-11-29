@@ -27,19 +27,11 @@ public class MyAccountSteps extends PageSteps {
         MyAccountService.clickAccountDetails();
     }
     @Then("User can view account details where he can change his password also")
-    public void userCanViewAccountDetails() {
-        MyAccountService.verifyAccountDetails();
-    }
+    public void userCanViewAccountDetails() { MyAccountService.verifyAccountDetails(); }
     @And("click on My Account link")
-    public void clickOnMyAccountLink() {
-        MyAccountService.clickMyAccountButton();
-    }
+    public void clickOnMyAccountLink() { MyAccountService.clickMyAccountButton();  }
     @And("click on Logout button")
-    public void clickOnLogoutButton() {
-        MyAccountService.clickLogOut();
-    }
+    public void clickOnLogoutButton() { MyAccountService.clickLogOut(); }
     @Then("on clicking logout,User successfully comes out from the site")
-    public void onClickingLogoutUserSuccessfully() {
-        LoginService.isLoginTitle();
-    }
+    public void onClickingLogoutUserSuccessfully() { LoginService.isLoginTitle(); }
 }

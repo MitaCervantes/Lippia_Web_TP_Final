@@ -26,9 +26,7 @@ public class HomePageSteps extends PageSteps {
         HomePageService.navigatingAddBookPageVerification();
     }
     @And("Click on the Add To Basket button which adds that book to your basket")
-    public void clickOnTheAddToBasketButton() {
-        HomePageService.clickAddToBasket();
-    }
+    public void clickOnTheAddToBasketButton() { HomePageService.clickAddToBasket(); }
     @And("User can view that Book in the Menu item with price.")
     public void userCanViewThatBookInTheMenuItemWithPrice() {
         HomePageService.bookWithPriceInTheMenuItem();
@@ -59,7 +57,6 @@ public class HomePageSteps extends PageSteps {
         HomePageService.setDataBillingForm(personalData);
         HomePageService.selectPaymentMethod(method);
     }
-
     @And("User has the feasibility to add coupon in the payment gateway page and also he can find billing,order and additional details.")
     public void userHasTheFeasibilityToAddCoupon() {
         HomePageService.verifyAddCoupon();
@@ -73,7 +70,5 @@ public class HomePageSteps extends PageSteps {
     public void ThePageNavigatesToOrderConfirmationPageWithAllDetails() {
         HomePageService.orderConfirmationDetails();
     }
-
-
 
 }

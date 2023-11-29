@@ -1,7 +1,6 @@
 package lippia.web.services;
 
 import com.crowdar.core.actions.ActionManager;
-import lippia.web.constants.HomePageConstants;
 import lippia.web.constants.ShopConstants;
 import org.openqa.selenium.WebElement;
 

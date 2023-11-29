@@ -132,11 +132,6 @@ public class HomePageService extends ActionManager {
 
         String paymentElement = paymentMethods.get(method);
         if (paymentElement != null) {
-            /*List<String> valuesList = new ArrayList<>(paymentMethods.values());
-            for (String value : valuesList) {
-                System.out.println("Valor: " + value);
-                valor = value;
-            }*/
             WebElement element = getElement(HomePageConstants.PAYMENT_METHOD_CHECKBOX + paymentElement);
             System.out.println("Locator resultante: " + HomePageConstants.PAYMENT_METHOD_CHECKBOX + paymentElement);
 
@@ -162,16 +157,14 @@ public class HomePageService extends ActionManager {
         click(HomePageConstants.COUPON_LINK);
         waitVisibility(HomePageConstants.COUPON_FORM);
         Assert.assertTrue(isVisible(HomePageConstants.COUPON_FORM));
-        waitTime(1500);
     }
 
     public static void clickPlaceOrderButton(){
         ((JavascriptExecutor) DriverManager.getDriverInstance()).executeScript("window.scrollTo(0, document.body.scrollHeight)");
         waitTime(1500);
         click(HomePageConstants.PLACE_ORDER_BUTTON);
-        waitTime(3000);
-
     }
+
     public static void orderConfirmationDetails(){
         waitVisibility(HomePageConstants.ORDER_DETAILS_TITLE);
         Assert.assertTrue(isVisible(HomePageConstants.ORDER_DETAILS_TITLE));
@@ -181,7 +174,6 @@ public class HomePageService extends ActionManager {
         Assert.assertTrue(isVisible(HomePageConstants.METHOD_DATA));
         waitTime(1500);
     }
-
 
 
 }

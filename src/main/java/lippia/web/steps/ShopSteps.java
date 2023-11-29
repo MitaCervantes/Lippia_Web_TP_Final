@@ -14,7 +14,6 @@ public class ShopSteps extends PageSteps {
     public void clickOnTheAddToBasketButton() {
         ShopService.clickAddToBasket();
     }
-
     @And("Tax rate for indian should be 2 percent and for abroad it should be 5 percent")
     public void taxRateForIndianShouldDifferent() {
         ShopService.verifyTax();

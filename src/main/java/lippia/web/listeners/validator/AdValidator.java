@@ -1,6 +1,5 @@
 package lippia.web.listeners.validator;
 
-import com.crowdar.core.actions.WebActionManager;
 import com.crowdar.driver.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

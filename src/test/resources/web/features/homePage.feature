@@ -1,4 +1,4 @@
-
+@Smoke
 Feature: HomePage
 
 Background:
@@ -27,7 +27,7 @@ Background:
 
 
   @PlaceOrder
-Scenario Outline:  18. Home-Arrivals-Add to Basket-Items-Check-out-Payment Gateway-Place order
+  Scenario Outline:  18. Home-Arrivals-Add to Basket-Items-Check-out-Payment Gateway-Place order
   When Click on Shop Menu
   And Now click on Home menu button
   And Test whether the Home page has Three Arrivals only
